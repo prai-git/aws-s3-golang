@@ -3,6 +3,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -17,9 +18,9 @@ import (
 
 func main() {
 
-	fmt.Println("trying to access the s3")
-	if len(os.Args) < 4 {
-		fmt.Println("too little arguments")
+	fmt.Println("ListObjects the WAS S3")
+	if len(os.Args) < 5 {
+		log.Fatal("ERROR: less params as expected (usage ./aws_s3_iam_example Region KeyId AuthKey Bucket)")
 		return
 	}
 
@@ -46,7 +47,7 @@ func main() {
 		return true
 	})
 	if err != nil {
-		fmt.Println("failed to list objects", err)
+		log.Fatal("failed to list objects", err)
 		return
 
 	}
