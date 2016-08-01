@@ -1,18 +1,17 @@
-# aws-s3-golang
 
-= Example of using WAS S3 services with golang
 
-== Description
+Example of using WAS S3 services with golang
+============================================
+
+Description
+-----------
 
 This is simple examle of listing all object of S3 bucket. 
 
+Usage
+------
 
-See usage <<another-section>> .
-
-== Usage
-
-
-NOTE: Provide the parameter at command line 
+NOTE: Provide the parameters at command line 
 
 	* Region
 	* Access Key ID
